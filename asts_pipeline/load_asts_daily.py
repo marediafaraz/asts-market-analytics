@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from google.cloud import bigquery
 
 TICKER = os.getenv("TICKER", "ASTS")
-API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")  # set in env, don't hardcode
+API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")  # set in env
 BQ_PROJECT = os.getenv("BQ_PROJECT")
 BQ_DATASET = os.getenv("BQ_DATASET", "asts_live")
 BQ_TABLE = os.getenv("BQ_TABLE", "asts_stock_daily_raw")
