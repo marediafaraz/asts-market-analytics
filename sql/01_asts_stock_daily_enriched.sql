@@ -1,10 +1,6 @@
--- StandardSQL (BigQuery)
--- Model: asts_stock_daily_enriched
--- Purpose:
---   Enrich daily ASTS market data with lag features, day-over-day changes,
---   and rolling moving averages for Looker Studio charts.
+-- Tested query used to build asts_stock_daily_enriched
+-- Source: asts_live.asts_stock_daily
 
-CREATE OR REPLACE TABLE `project-bd8dfc8e-d597-4b1c-903.asts_live.asts_stock_daily_enriched` AS
 SELECT
   date,
   ticker,
@@ -38,5 +34,5 @@ SELECT
     ROWS BETWEEN 19 PRECEDING AND CURRENT ROW
   ) AS ma_20d
 
-FROM `project-bd8dfc8e-d597-4b1c-903.asts_live.asts_stock_daily`;
+FROM asts_live.asts_stock_daily;
 
