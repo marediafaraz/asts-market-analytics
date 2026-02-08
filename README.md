@@ -22,7 +22,6 @@ API → Python → BigQuery (raw + enriched tables/views) → Looker Studio
 ## Repository Structure
 - `asts_pipeline/` — Python ingestion pipeline
 - `sql/` — BigQuery SQL models and views
-- `dashboard/` — dashboard notes / screenshots
 
 ## How It Works
 1. Python script pulls daily market data from an external API  
