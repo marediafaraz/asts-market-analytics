@@ -16,4 +16,5 @@ market data from an external API and load it into BigQuery.
 ## Setup
 ```bash
 pip install -r requirements.txt
+python load_asts_daily.py
 
